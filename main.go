@@ -1,7 +1,5 @@
 package main
 
-//Just added a comment
-
 import (
 	"html/template"
 	"net/http"
@@ -11,7 +9,7 @@ var tpl *template.Template
 
 func init() {
 	var err error
-	tpl, err = template.ParseFiles("templates/index.gohtml")
+	tpl, err = template.ParseFiles("templates/page.gohtml")
 	if err != nil {
 		panic(err)
 	}
@@ -24,7 +22,7 @@ func main() {
 	http.Handle("/css/", fs)
 	http.Handle("/img/", fs)
 
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":80", nil)
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
