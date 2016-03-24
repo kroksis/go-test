@@ -2,11 +2,11 @@
 Testing Go programming language
 
 # Generate tls certificate
-### Mac
+Mac:
 ```
 go run $(go env GOROOT)/src/crypto/tls/generate_cert.go --host=mydomain.com
 ```
-### Windows
+Windows:
 ```
 go run %GOROOT%/src/crypto/tls/generate_cert.go --host=mydomain.com
 ```
